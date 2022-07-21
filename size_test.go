@@ -1,6 +1,7 @@
 package bytesize
 
 import (
+	"math"
 	"testing"
 )
 
@@ -36,8 +37,9 @@ func TestFormat(t *testing.T) {
 		{952500001, "953 MB"},
 		{1000000000, "1.00 GB"},
 		{2300000000000, "2.30 TB"},
-		{9700000000000000, "9.70 PB"},
-		{18400000000000000, "18.4 PB"},
+		{15500000000000000, "15.5 PB"},
+		{math.MaxInt64, "9.22 EB"},
+		{math.MaxUint64, "18.4 EB"},
 	}
 	for _, c := range cases {
 		out := Format(c.value)

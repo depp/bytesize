@@ -16,16 +16,19 @@ All corner cases should be handled correctly and you should never see unusual or
 
 Some test cases:
 
-    0 => "0 B"
-    999 => "999 B"
-    1000 => "1.00 kB"
-    1005 => "1.00 kB"
-    1006 => "1.01 kB"
-    1014 => "1.01 kB"
-    1015 => "1.02 kB"
-    9995 => "10.0 kB"
-    314000 => "314 kB"
-    18400000000000000 => "18.4 PB"
+```
+0 => "0 B"
+999 => "999 B"
+1000 => "1.00 kB"
+1005 => "1.00 kB"
+1006 => "1.01 kB"
+1014 => "1.01 kB"
+1015 => "1.02 kB"
+9995 => "10.0 kB"
+314000 => "314 kB"
+math.MaxInt64 => "9.22 EB"
+math.MaxUint64 => "18.4 EB"
+```
 
 ## Parsing
 
